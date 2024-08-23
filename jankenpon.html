@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jankenpon!</title>
+
+    <link
+      rel="stylesheet"
+      href="styles/jankenpon.css">
+  </head>
+  <body>
+    <p class="title">
+      Rock Paper Scissors
+    </p>
+
+    <button class="js-rock-button move-button">
+      <img src="jankenpon-img/rock-emoji.png" class="move-icon">
+    </button>
+
+    <button class="js-paper-button move-button">
+      <img src="jankenpon-img/paper-emoji.png" class="move-icon">
+    </button>
+
+    <button class="js-scissors-button move-button">
+      <img src="jankenpon-img/scissors-emoji.png" class="move-icon">
+    </button>
+
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+
+    <button class="js-reset-score-button reset-score-button">Reset Score</button>
+    <button class="js-auto-play-button auto-play-button">Auto Play</button>
+
+    <div class="js-confirm-reset confirm-reset"></div>
+
+    <div class="note">
+      <u>Note:</u>
+    </div>
+    <div>
+      Click on the icons to play/reset<br><br>
+      Or press keys to:<br><br>
+      R-->Rock<br>
+      P-->Paper<br>
+      S-->Scisssors<br>
+      A-->Auto Play<br>
+      Backspace-->Reset Score<br>
+    </div>
+    <script src="script/jankenpon.js"></script>
+  </body>
+</html>
