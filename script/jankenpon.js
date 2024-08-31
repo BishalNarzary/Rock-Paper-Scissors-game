@@ -75,12 +75,22 @@ document.querySelector('.js-scissors-button')
 document.querySelector('.js-reset-score-button')
   .addEventListener('click', ()=>{
     document.querySelector('.js-confirm-reset')
-      .innerHTML='Are you sure you want to reset the score? <button class="js-yes-button yes-button">Yes</button> <button class="js-no-button no-button">No</button>';
+      .innerHTML='Are you sure you want to reset the score? (Y/N) <button class="js-yes-button yes-button">Yes</button> <button class="js-no-button no-button">No</button>';
   });
 
 document.querySelector('.js-auto-play-button')
   .addEventListener('click', ()=>{
     autoPlay();
+  });
+
+  document.body.addEventListener('keydown', (event)=>{
+    if ((document.querySelector('.js-confirm-reset')
+          .innerHTML!='')
+        &&(event.key==='y')){
+      resetScore();
+    }
+    document.querySelector('.js-confirm-reset')
+      .innerHTML='';
   });
 
 document.body.addEventListener('keydown', (event)=>{
@@ -95,7 +105,7 @@ document.body.addEventListener('keydown', (event)=>{
   }
   else if (event.key==='Backspace'){
     document.querySelector('.js-confirm-reset')
-      .innerHTML='Are you sure you want to reset the score? <button class="js-yes-button yes-button">Yes</button> <button class="js-no-button no-button">No</button>';
+      .innerHTML='Are you sure you want to reset the score? (Y/N) <button class="js-yes-button yes-button">Yes</button> <button class="js-no-button no-button">No</button>';
   }
   else if (event.key==='a'){
     autoPlay();
